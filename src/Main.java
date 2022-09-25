@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Main
@@ -16,12 +17,16 @@ public class Main
         double tipPer = scan.nextDouble();
         scan.nextLine();
 
-        System.out.println(cost);
+        System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
+        double costTotal = scan.nextDouble();
+        scan.nextLine();
+        double itemCost = 0;
 
-        while (cost != -1)
+        while (itemCost != -1)
         {
             System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
-            double cost += scan.nextDouble();
+            itemCost = scan.nextDouble();
+            costTotal = itemCost + costTotal;
             scan.nextLine();
         }
 
