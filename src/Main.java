@@ -4,6 +4,7 @@ public class Main
 {
     public static void main(String[] args)
     {
+
         Scanner scan = new Scanner(System.in);
         System.out.println("Welcome to the tip calculator!");
 
@@ -12,18 +13,20 @@ public class Main
         scan.nextLine();
 
         System.out.print("What's the tip percentage? ");
-        double tipPer = scan.nextInt();
+        double tipPer = scan.nextDouble();
         scan.nextLine();
 
-        System.out.print("Enter a cost in dollars and cents, e.g. 12.50 ");
-        double cost = 0.0;
+        System.out.println(cost);
 
         while (cost != -1)
         {
-            cost += scan.nextInt();
+            System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
+            double cost += scan.nextDouble();
+            scan.nextLine();
         }
 
         System.out.println(cost);
+
 
         scan.close();
 
