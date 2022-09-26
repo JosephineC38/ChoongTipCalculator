@@ -44,12 +44,20 @@ public class Main
         double perCost = bill / numPe;
         String formPerCost = formatter.format(perCost);
 
+        double perTip = tipTotal / numPe;
+        String formPerTip = formatter.format(perTip);
+
+        double perTotal = billTip / numPe;
+        String formPerTotal = formatter.format(perTotal);
+
         System.out.println("------------------------");
         System.out.println("Total Bill Before Tip: " + bill);
         System.out.println("Tip Percentage: " + tip);
         System.out.println("Total Tip: " + formTipTotal);
         System.out.println("Total Bill With Tip: " + formBillTip);
         System.out.println("Per Person Cost Before Tip: " + formPerCost);
+        System.out.println("Tip Per Person: " + formPerTip);
+        System.out.println("Total Cost Per Person: " + formPerTotal);
 
 
     }
